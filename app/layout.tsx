@@ -1,5 +1,6 @@
-import Header from "app/components/Header";
 import "./globals.css";
+// import Providers from "app/components/Providers";
+import Header from "app/components/Header";
 
 export const metadata = {
   title: "Saul News",
@@ -13,9 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* </Providers>
+        <Providers> */}
       <body>
-        <Header />
-        <div>{children}</div>
+        <div className="bg-gray-100 dark:bg-zinc-900 transition-all duration-700">
+          <Header />
+          <div className="max-w-6xl mx-auto">{children}</div>
+        </div>
       </body>
     </html>
   );
